@@ -12,13 +12,14 @@ const assetsPath = path.join(_dirName, "public");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(assetsPath));
+
 app.set("views", path.join(_dirName, "views"));
 app.set("view engine", "ejs");
+
 app.use("/", indexRouter);
 
 app.use((err, req, res, next) => {
   console.log(err);
-
   res.status(err.status || 400).send("Bad Request");
 });
 
