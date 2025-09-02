@@ -15,7 +15,7 @@ export const getAllMessage = () => {
     return [...messages];
 }
 
-export const addnewMessage = (username,message,date) => {
+export const addNewMessage = (username,message,date) => {
 
     const tempObject = {
         user:username || "",
