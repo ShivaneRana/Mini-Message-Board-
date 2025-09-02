@@ -1,34 +1,34 @@
 import { Router } from "express";
-import { getAllMessage } from "../message.js";
+import { getAllMessage,addNewMessage } from "../message.js";
 const indexRouter = Router();
 
 
-indexRouter.get("/",async (req,res) => {
+indexRouter.get("/",(req,res) => {
     try{
         const messages = getAllMessage();
-        res.render("index", { messages: messages });
-
+        res.status(200).render("index", { messages: messages });
     }catch(err){
-        console.error(error)
+        console.error(err)
     }
 })
 
 indexRouter.get("/new{s}",(req,res) => {
-
     try{
-        res.render("form");
+        res.status(200).render("form");
     }catch(err){
-        console.error(error);
+        console.error(err);
     }
-
 })
 
 indexRouter.post("/new",(req,res) => {
-
-})
-
-indexRouter.get("/{*splat}",(req,res,next) => {
-    throw new Error("Wront url");
+    try{
+        const {username,message} = req.body;
+        const newDate = new Date();
+        addNewMessage(username,message,newDate);
+        res.redirect("/");
+    }catch(err){
+        console.error(err);
+    }
 })
 
 export default indexRouter;
