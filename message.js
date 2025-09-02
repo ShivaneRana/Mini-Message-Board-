@@ -20,10 +20,10 @@ export const addnewMessage = (username,message,date) => {
     const tempObject = {
         user:username || "",
         text:message || "",
-        date:date,
+        added:date,
     }    
 
-    message.push(tempObject);
+    messages.push(tempObject);
 }
 
 
