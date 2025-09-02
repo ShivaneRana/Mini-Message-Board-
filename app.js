@@ -8,25 +8,25 @@ dotenv.config();
 const app = express();
 const _fileName = fileURLToPath(import.meta.url);
 const _dirName = path.dirname(_fileName);
-const assetsPath = path.join(_dirName,"public");
+const assetsPath = path.join(_dirName, "public");
 
 app.use(express.static(assetsPath));
-app.set("views",path.join(_dirName,"views"));
-app.set("view engine","ejs");
-app.use("/",indexRouter);
+app.set("views", path.join(_dirName, "views"));
+app.set("view engine", "ejs");
+app.use("/", indexRouter);
 
-app.use((err,req,res,next) => {
-    console.log(err);
+app.use((err, req, res, next) => {
+  console.log(err);
 
-    res.status(err.status || 400).send("Bad Request");
-})
+  res.status(err.status || 400).send("Bad Request");
+});
 
 const PORT = process.env.PORT;
 
-app.listen(PORT,(err) => {
-    if(err){
-        console.log(err);
-    }
+app.listen(PORT, (err) => {
+  if (err) {
+    console.log(err);
+  }
 
-    console.log(`server live at: http://localhost:${PORT}`);
-})
+  console.log(`server live at: http://localhost:${PORT}`);
+});
