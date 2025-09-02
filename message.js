@@ -12,18 +12,15 @@ const messages = [
 ];
 
 export const getAllMessage = () => {
-    return [...messages];
-}
+  return [...messages];
+};
 
-export const addNewMessage = (username,message,date) => {
+export const addNewMessage = (username, message, date) => {
+  const tempObject = {
+    user: username || "",
+    text: message || "",
+    added: date,
+  };
 
-    const tempObject = {
-        user:username || "",
-        text:message || "",
-        added:date,
-    }    
-
-    messages.push(tempObject);
-}
-
-
+  messages.push(tempObject);
+};
