@@ -1,4 +1,4 @@
-export const messages = [
+const messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -10,3 +10,19 @@ export const messages = [
     added: new Date(),
   },
 ];
+
+export const getAllMessage = () => {
+    return [...messages];
+}
+
+export const addnewMessage = (username,message,date) => {
+
+    const tempObject = {
+        user:username || "",
+        text:message || "",
+    }    
+
+    message.push(tempObject);
+}
+
+

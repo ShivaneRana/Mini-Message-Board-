@@ -1,14 +1,30 @@
 import { Router } from "express";
-import { messages } from "../message.js";
+import { getAllMessage } from "../message.js";
 const indexRouter = Router();
 
 
-indexRouter.get("/",(req,res) => {
-    res.render("index",{messages:messages});
+indexRouter.get("/",async (req,res) => {
+    try{
+        const messages = getAllMessage();
+        res.render("index", { messages: messages });
+
+    }catch(err){
+        console.error(error)
+    }
 })
 
 indexRouter.get("/new{s}",(req,res) => {
-    res.status(200).send("This is from where you will be sending message")
+
+    try{
+        res.render("form");
+    }catch(err){
+        console.error(error);
+    }
+
+})
+
+indexRouter.post("/new",(req,res) => {
+
 })
 
 indexRouter.get("/{*splat}",(req,res,next) => {
