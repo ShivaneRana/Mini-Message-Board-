@@ -10,6 +10,7 @@ const _fileName = fileURLToPath(import.meta.url);
 const _dirName = path.dirname(_fileName);
 const assetsPath = path.join(_dirName, "public");
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(assetsPath));
 app.set("views", path.join(_dirName, "views"));
 app.set("view engine", "ejs");
