@@ -20,6 +20,7 @@ export const addnewMessage = (username,message,date) => {
     const tempObject = {
         user:username || "",
         text:message || "",
+        date:date,
     }    
 
     message.push(tempObject);
