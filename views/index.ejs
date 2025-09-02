@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        This is home page 
+        <% messages.forEach(message => {%>
+        <div class="message-box">
+            <p><%= message.text%></p>
+            <p><%= message.user%></p>
+            <p><%= message.added%></p>
+        </div>
+        <%})%>
     </body>
 </html>
