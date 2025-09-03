@@ -1,5 +1,6 @@
 :root {
   scroll-behavior: smooth;
+  --transition-standard: all .50s ease;
 }
 
 * {
@@ -22,5 +23,33 @@ body {
     "Helvetica Neue",
     sans-serif;
   font-size: 16px;
-  background-color: red;
+  background-color: whitesmoke;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.message-box{
+  outline: 1px solid black;
+  padding: 10px;
+  transition: var(--transition-standard);
+}
+
+.message-user{
+
+}
+
+.message-text{
+
+}
+
+.message-date{
+
+}
+
+.add-message-link{
 }
