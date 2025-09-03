@@ -1,33 +1,30 @@
-.form{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 40vw;
+.form {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 40vw;
 }
 
-.form > textarea{
-    resize: none;
-    width: 100%;
-    min-height: 40vh;
-    padding: 5px;
+.form > textarea {
+  resize: none;
+  width: 100%;
+  min-height: 40vh;
+  padding: 5px;
 }
 
-.form > input{
-    width: 100%;
-    padding: 5px;
+.form > input {
+  width: 100%;
+  padding: 5px;
 }
 
-.form-button-holder{
-
+.form-button-holder {
 }
 
-.button-submit{
-
+.button-submit {
 }
 
-.button-reset{
-
+.button-reset {
 }
