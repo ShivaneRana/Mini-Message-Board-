@@ -8,19 +8,13 @@
     </head>
     <body>
         <form class="form" method="POST" action="/new">
-            <textarea placeholder="Enter message" id="message" name="message" required></textarea>
+            <textarea placeholder="Enter message" id="message" name="message" autofocus required></textarea>
             <br>
-            <input id="username" name="username" placeholder="Enter username" type="text" required>
+            <input id="username" name="username" placeholder="Enter username"  type="text" required>
             <div class="form-button-holder">
                 <button class="button-submit" type="submit">Submit</button>
                 <button class="button-reset" type="reset">Reset</button>
             </div> 
         </form>
-        <script>
-            const submitButton = document.querySelector(".button-submit");
-            const userInput = document.querySelector("#username");
-            const messageInput = document.querySelector("#message");
-            messageInput.focus();
-        </script>
     </body>
 </html>
