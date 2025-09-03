@@ -9,8 +9,13 @@
         <% messages.forEach(message => {%>
         <div class="message-box">
             <p class="message-text"><%= message.text%></p>
-            <p class="message-user"><%= message.user%></p>
-            <p class="message-date"><%= `${message.added.getDay()} / ${message.added.getMonth()} / ${message.added.getFullYear()}`%></p>
+            <div>
+                <p class="message-user">- <%= message.user%>
+                </p>
+                <p class="message-date">
+                    <%= `${message.added.getDay()} / ${message.added.getMonth()} / ${message.added.getFullYear()}`%>
+                </p>
+            </div>
         </div>
         <%})%>
         <a class="add-message-link" href="/new">Create a message</a>
