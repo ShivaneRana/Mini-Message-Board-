@@ -47,7 +47,9 @@ body {
   gap: 20px;
 }
 
-.message-user,.message-date,.message-text{
+.message-user,
+.message-date,
+.message-text {
   width: 100%;
   text-wrap: wrap;
 }
