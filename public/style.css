@@ -35,18 +35,35 @@ body {
 }
 
 .message-box {
+  width: 30vw;
+  min-height: 100px;
+  height: max-content;
   outline: 1px solid black;
   padding: 10px;
   transition: var(--transition-standard);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.message-user {
+.message-user,.message-date,.message-text{
+  width: 100%;
+  text-wrap: wrap;
 }
 
 .message-text {
+  width: 100%;
+  text-align: left;
 }
 
+.message-user {
+  width: 100%;
+  text-align: right;
+}
 .message-date {
+  width: 100%;
+  text-align: right;
 }
 
 .add-message-link {
