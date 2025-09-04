@@ -47,6 +47,13 @@ body {
   gap: 20px;
 }
 
+.message-box > div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .message-user,
 .message-date,
 .message-text {
