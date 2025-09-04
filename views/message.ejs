@@ -6,19 +6,21 @@
     <link rel="stylesheet" href="/message.css">
 </head>
 <body>
+<div class="message-box">
+    <p class="message-text">
+        <%= message.text%>
+    </p>
     <div>
-        <p>
-            <%= message.user%>
+        <p class="message-user">- <%= message.user%>
         </p>
-        <p>
-            <%= message.text%>
+        <p class="message-date">
+            <%= `${message.added.getDate()} / ${message.added.getMonth()} / ${message.added.getFullYear()}`%>
         </p>
-        <p>
-            <%= message.added%>
-        </p>
-        <div>
-            <a href="/">Go back to main page</a>
-        </div>
     </div>
+</div>
+<div class="link-holder">
+    <a href="/">Go back to homepage</a>
+    <a href="/new">Add new message</a>
+</div>
 </body>
 </html>
