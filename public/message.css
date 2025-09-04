@@ -68,8 +68,8 @@ body {
   text-align: right;
 }
 
-.link-holder{
-    display: flex;
-    justify-content: space-between;
-    width: 30vw;
+.link-holder {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
 }
