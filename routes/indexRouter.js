@@ -30,15 +30,15 @@ indexRouter.post("/new", (req, res) => {
   }
 });
 
-indexRouter.get("/message/:index",(req,res) => {
+indexRouter.get("/message/:index", (req, res) => {
   try {
-    const {index} = req.params;
+    const { index } = req.params;
     let message = getAllMessage();
     message = message[index];
-    res.render("message",{message:message});
+    res.render("message", { message: message });
   } catch (err) {
     console.error(err);
   }
-})
+});
 
 export default indexRouter;
