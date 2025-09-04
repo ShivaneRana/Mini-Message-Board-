@@ -5,8 +5,7 @@
   align-items: center;
   width: 40vw;
   padding: 10px;
-  outline: 5px solid black;
-  border-radius: 10px;
+  outline: 1px solid black;
   gap: 20px;
 }
 
